@@ -1,1 +1,3 @@
-# lab2_2022-2
+# Laboratório 2 - 2022/02
+### Algoritmos e Programação: Estruturas Lineares
+
