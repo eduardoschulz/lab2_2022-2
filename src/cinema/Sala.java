@@ -5,14 +5,12 @@ public class Sala {
     private int numero;
     private int num_coluna, num_fileira;
     private String status, filme;
-    private Mapa mapa;
 
     public Sala(int numero, int num_coluna, int num_fileira) {
         this.numero = numero;
         this.num_coluna = num_coluna;
         this.num_fileira = num_fileira;
         assentos = new Assento[num_fileira][num_coluna];
-        Mapa mapa = new Mapa(this);
     }
 
     public Assento[][] getAssentos() {
@@ -61,13 +59,5 @@ public class Sala {
 
     public void setFilme(String filme) {
         this.filme = filme;
-    }
-
-    public Mapa getMapa() {
-        return mapa;
-    }
-
-    public void setMapa(Mapa mapa) {
-        this.mapa = mapa;
     }
 }

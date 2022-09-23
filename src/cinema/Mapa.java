@@ -8,7 +8,7 @@ public class Mapa {
     }
     public void listarAssentos(){
         for(int i=0; i < sala.getAssentos().length; i++){
-            System.out.printf("%c" , (i+'a')); //0 + 'a' = 'a'; 1 + 'a' = b ASCII
+            System.out.printf("%d" , (i+1)); //0 + 'a' = 'a'; 1 + 'a' = b ASCII
             for(int j=0; j < sala.getAssentos()[0].length; j++){
                 if(sala.getAssentos()[i][j] != null)
                     System.out.printf(" * ");
@@ -18,13 +18,13 @@ public class Mapa {
             System.out.printf("\n");
         }
         System.out.printf(" ");
-        for(int i=0; i < sala.getAssentos()[0].length - 1; i++)
-            System.out.printf(" %d ", (i+1));
+        for(int i=0; i < sala.getAssentos()[0].length; i++)
+            System.out.printf(" %c ", (i + 'a'));
     }
     public int assentosVagos(){
         int vagos = 0;
         for(int i=0; i < sala.getAssentos().length; i++)
-            for(int j=0; j < sala.getAssentos()[0].length; i++)
+            for(int j=0; j < sala.getAssentos()[0].length ; j++)
                 if(sala.getAssentos()[i][j] == null)
                     vagos++;
         return vagos;
